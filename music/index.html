@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unreal's playlist</title>
+    <link rel="icon" type="image/png" href="https://itzmeunreal.neocities.org/images/icon.png">
+    <link rel="stylesheet" href="https://itzmeunreal.neocities.org/test/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="music.css">
+    <base target="_top">
+</head>
+<body>
+<div class="content">
+    <div class="navbar-items">
+        <span class="navbar-page-text">unreal's playlist</span>
+        <div class="nav-dropdown">
+            <button class="label">
+                <img src="https://itzmeunreal.neocities.org/images/home.png" width="16" height="16" class="label-icon-space">
+                main
+                <span class="dropdown-arrow">&#9662;</span>
+            </button>
+            <div class="dropdown-menu">
+                <a href="https://itzmeunreal.neocities.org/test/" class="dropdown-item">
+                    <img src="https://itzmeunreal.neocities.org/images/home.png" width="14" height="14" class="label-icon-space">
+                    home
+                </a>
+                <a href="https://itzmeunreal.neocities.org/test/about.html" class="dropdown-item">
+                    <img src="https://itzmeunreal.neocities.org/images/about.png" width="14" height="14" class="label-icon-space">
+                    about
+                </a>
+                <a href="https://itzmeunreal.neocities.org/test/works.html" class="dropdown-item">
+                    <img src="https://itzmeunreal.neocities.org/images/work.png" width="14" height="14" class="label-icon-space">
+                    works
+                </a>
+            </div>
+        </div>
+        <div class="nav-dropdown">
+            <button class="label label-primary">
+                <img src="https://itzmeunreal.neocities.org/images/joystick.png" width="16" height="16" class="label-icon-space">
+                entertainment
+                <span class="dropdown-arrow">&#9662;</span>
+            </button>
+            <div class="dropdown-menu">
+                <a href="https://itzmeunreal.neocities.org/test/music.html" class="dropdown-item">
+                    <img src="https://itzmeunreal.neocities.org/images/music.png" width="14" height="14" class="label-icon-space">
+                    music player
+                </a>
+                <a href="https://itzmeunreal.neocities.org/test/arcade.html" class="dropdown-item">
+                    <img src="https://itzmeunreal.neocities.org/images/joystick.png" width="14" height="14" class="label-icon-space">
+                    arcade
+                </a>
+                <a href="https://itzmeunreal.neocities.org/test/paint.html" class="dropdown-item">
+                    <img src="https://itzmeunreal.neocities.org/images/sketch.png" width="14" height="14" class="label-icon-space">
+                    sketchbook
+                </a>
+            </div>
+        </div>
+        <div class="nav-dropdown">
+            <button class="label">
+                <img src="https://itzmeunreal.neocities.org/images/community1.png" width="16" height="16" class="label-icon-space">
+                community
+                <span class="dropdown-arrow">&#9662;</span>
+            </button>
+            <div class="dropdown-menu">
+                <a href="https://itzmeunreal.neocities.org/test/forum.html" class="dropdown-item">
+                    <img src="https://itzmeunreal.neocities.org/images/forum.png" width="14" height="14" class="label-icon-space">
+                    forum
+                </a>
+                <a href="https://itzmeunreal.neocities.org/test/chat.html" class="dropdown-item">
+                    <img src="https://itzmeunreal.neocities.org/images/chat.png" width="14" height="14" class="label-icon-space">
+                    chat room
+                </a>
+                <a href="https://itzmeunreal.neocities.org/test/guestbook.html" class="dropdown-item">
+                    <img src="https://itzmeunreal.neocities.org/images/guestbook.png" width="14" height="14" class="label-icon-space">
+                    guestbook
+                </a>
+            </div>
+        </div>
+        <div class="nav-dropdown">
+            <button class="label">
+                <img src="https://itzmeunreal.neocities.org/images/extras.png" width="16" height="16" class="label-icon-space">
+                extra
+                <span class="dropdown-arrow">&#9662;</span>
+            </button>
+            <div class="dropdown-menu">
+                <a href="https://itzmeunreal.neocities.org/test/siteinfo.html" class="dropdown-item">
+                    <img src="https://itzmeunreal.neocities.org/images/thisweb.png" width="14" height="14" class="label-icon-space">
+                    site info
+                </a>
+                <a href="https://itzmeunreal.neocities.org/test/contributors.html" class="dropdown-item">
+                    <img src="https://itzmeunreal.neocities.org/images/users.png" width="14" height="14" class="label-icon-space">
+                    contributors
+                </a>
+                <a href="https://itzmeunreal.neocities.org/test/donate.html" class="dropdown-item">
+                    <img src="https://itzmeunreal.neocities.org/images/donate.png" width="14" height="14" class="label-icon-space">
+                    donate
+                </a>
+                <a href="https://gamesbefore.neocities.org/" class="dropdown-item">
+                    <img src="https://gamesbefore.neocities.org/img/glungus.png" width="14" height="14" class="label-icon-space">
+                    GLUNGUS
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="card mp-wrapper">
+            <div class="mp-header">
+                <span>♪ music player</span>
+            </div>
+
+            <div class="mp-body">
+                <div class="mp-left">
+                    <div class="mp-artwork-area">
+                        <canvas id="visualizer"></canvas>
+                        <div class="mp-disk-wrapper">
+                            <img src="https://itzmeunreal.neocities.org/images/icon.png" id="spinningDisk" alt="disk">
+                        </div>
+                    </div>
+
+                    <div class="mp-info">
+                        <div class="mp-song-name" id="songName">select a song</div>
+                        <div class="mp-song-meta" id="songMeta">—</div>
+                    </div>
+
+                    <div class="mp-progress-area">
+                        <input type="range" id="progressBar" value="0" max="100" step="0.01">
+                        <div class="mp-time" id="currentTime">0:00</div>
+                    </div>
+
+                    <div class="mp-controls">
+                        <button class="mp-btn" id="shuffleBtn" title="shuffle"><i class="fa-solid fa-shuffle"></i></button>
+                        <button class="mp-btn" id="prevBtn" title="previous"><i class="fa-solid fa-backward-step"></i></button>
+                        <button class="mp-btn mp-btn-play" id="playBtn" title="play/pause"><i class="fa-solid fa-play"></i></button>
+                        <button class="mp-btn" id="nextBtn" title="next"><i class="fa-solid fa-forward-step"></i></button>
+                        <button class="mp-btn" id="loopBtn" title="loop"><i class="fa-solid fa-repeat"></i></button>
+                    </div>
+
+                    <div class="mp-volume-area">
+                        <span class="mp-vol-icon" id="muteBtn"><i class="fa-solid fa-volume-high"></i></span>
+                        <input type="range" id="volumeBar" min="0" max="1" step="0.01" value="0.7">
+                        <span class="mp-vol-label" id="volLabel">70</span>
+                    </div>
+                </div>
+
+                <div class="mp-playlist" id="playlist"></div>
+            </div>
+        </div>
+
+        <div class="card" style="padding: 25px; margin-bottom: 20px;">
+            <div class="mp-artist-card">
+                <div class="mp-artist-pfp">
+                    <img class="mp-artist-pfp-img" id="artistPfp" src="" alt="artist">
+                </div>
+                <div class="mp-artist-info">
+                    <div class="mp-artist-name" id="artistName">select an artist</div>
+                    <div class="mp-artist-desc" id="artistDesc">click on an artist below to load their playlist</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="padding: 25px; margin-bottom: 30px;">
+            <p class="section-title" style="text-align:left; margin-bottom: 12px;">collection</p>
+            <p class="mp-row-title">favourite</p>
+            <p class="mp-row-desc">some of my favourite artists</p>
+            <div class="mp-albums-grid mp-row-gap">
+                <div class="mp-grid-item mp-artist-grid-item" data-playlist="playlist-xaev.js">
+                    <img src="https://itzmeunreal.neocities.org/images/covers/xaev/xaev.jpg" alt="xaev">
+                    <div class="img-caption">xaev</div>
+                </div>
+                <div class="mp-grid-item mp-artist-grid-item" data-playlist="playlist-nicopatty.js">
+                    <img src="https://itzmeunreal.neocities.org/images/covers/nicopatty/nicopatty.jpg" alt="nicopatty"><div class="img-caption">nicopatty</div>
+                </div>
+                <div class="mp-grid-item mp-artist-grid-item" data-playlist="playlist-sekins.js">
+                    <img src="https://itzmeunreal.neocities.org/images/covers/sekins/sekins.jpg" alt="sekins">
+                    <div class="img-caption">sekins</div>
+                </div>
+                <div class="mp-grid-item mp-artist-grid-item" data-playlist="playlist-cadenkala.js">
+                    <img src="https://itzmeunreal.neocities.org/images/covers/cadenkala/cadenkala.jpg" alt="cadenkala">
+                    <div class="img-caption">cadenkala</div>
+                </div>
+                <div class="mp-grid-item mp-artist-grid-item" data-playlist="playlist-twikipedia.js">
+                    <img src="https://itzmeunreal.neocities.org/images/covers/twikipedia/twikipedia.jpg" alt="twikipedia">
+                    <div class="img-caption">twikipedia</div>
+                </div>
+            </div>
+
+            <p class="mp-row-title">soundtracks</p>
+            <p class="mp-row-desc">osts i find really cool</p>
+            <div class="mp-albums-grid mp-row-gap">
+                <div class="mp-grid-item mp-artist-grid-item" data-playlist="playlist-wiisportsresort.js">
+                    <img src="https://itzmeunreal.neocities.org/images/covers/wii_sports_resort/cover.png" alt="wii sports resort">
+                    <div class="img-caption">wii sports resort</div>
+                </div>
+                <div class="mp-grid-item mp-artist-grid-item" data-playlist="playlist-wiiparty.js">
+                    <img src="https://itzmeunreal.neocities.org/images/covers/wii_party/cover.jpg" alt="wii party">
+                    <div class="img-caption">wii party</div>
+                </div>
+                <div class="mp-grid-item mp-artist-grid-item" data-playlist="playlist-mariokartwii.js">
+                    <img src="https://itzmeunreal.neocities.org/images/covers/mario_kart_wii/cover.png" alt="mario kart wii">
+                    <div class="img-caption">mario kart wii</div>
+                </div>
+                <div class="mp-grid-item mp-artist-grid-item" data-playlist="playlist-tomodachilife.js">
+                    <img src="https://itzmeunreal.neocities.org/images/covers/tomodachi_life/cover.jpg" alt="tomodachi life">
+                    <div class="img-caption">tomodachi life</div>
+                </div>
+                <div class="mp-grid-item mp-artist-grid-item" data-playlist="playlist-earthbound.js">
+                    <img src="https://itzmeunreal.neocities.org/images/covers/earthbound/cover.png" alt="earthbound">
+                    <div class="img-caption">earthbound</div>
+                </div>
+            </div>
+
+            <p class="mp-row-title">title</p>
+            <p class="mp-row-desc">description idkidkidkidk</p>
+            <div class="mp-albums-grid mp-row-gap">
+                <div class="mp-grid-item mp-artist-grid-item" data-playlist="">
+                    <div class="placeholder-box"></div>
+                </div>
+                <div class="mp-grid-item mp-artist-grid-item" data-playlist="">
+                    <div class="placeholder-box"></div>
+                </div>
+                <div class="mp-grid-item mp-artist-grid-item" data-playlist="">
+                    <div class="placeholder-box"></div>
+                </div>
+                <div class="mp-grid-item mp-artist-grid-item" data-playlist="">
+                    <div class="placeholder-box"></div>
+                </div>
+                <div class="mp-grid-item mp-artist-grid-item" data-playlist="">
+                    <div class="placeholder-box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<audio id="audioPlayer" crossorigin="anonymous"></audio>
+<script src="https://unpkg.com/webaudio-oscilloscope@3.2.1/dist/index.js"></script>
+<script src="music.js"></script>
+</body>
+</html>

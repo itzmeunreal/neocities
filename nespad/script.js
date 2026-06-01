@@ -1,5 +1,5 @@
-const svg_w = 612.002, svg_h = 251.924;
-const btns = {
+const SVG_W = 612.002, SVG_H = 251.924;
+const BTNS = {
 	'btn-b': {
 		type: 'circle',
 		cx: 430.15,
@@ -56,37 +56,29 @@ const btns = {
 	},
 };
 
-for (const [id, b] of Object.entries(btns))
-	b.el = document.getElementById(id);
+for (const [id, b] of Object.entries(BTNS)) b.el = document.getElementById(id);
 
-const img = document.getElementById('nes');
-const wrap = document.getElementById('wrap');
+const svg = document.getElementById('nes-svg');
 
 function positionAll() {
-	const renderedW = img.offsetWidth;
-	const renderedH = renderedW * (svg_h / svg_w);
-	const sx = renderedW / svg_w;
-	const sy = renderedH / svg_h;
-	wrap.style.height = renderedH + 'px';
-	for (const b of Object.values(btns)) {
+	const rect = svg.getBoundingClientRect();
+	const sx = rect.width / SVG_W;
+	const sy = rect.height / SVG_H;
+	for (const b of Object.values(BTNS)) {
 		const el = b.el;
 		if (b.type === 'circle') {
-			const s = Math.min(sx, sy);
-			const r = b.r * s;
-			el.style.cssText = `width:${r*2}px;height:${r*2}px;left:${b.cx*sx - r}px;top:${b.cy*sy - r}px`;
+			const r = b.r * Math.min(sx, sy);
+			el.style.cssText += `;width:${r*2}px;height:${r*2}px;left:${b.cx*sx-r}px;top:${b.cy*sy-r}px`;
 		} else {
-			const w = b.w * sx;
-			const h = b.h * sy;
-			el.style.cssText = `width:${w}px;height:${h}px;left:${b.cx*sx - w/2}px;top:${b.cy*sy - h/2}px`;
-			if (b.type === 'pill')
-				el.style.borderRadius = h / 2 + 'px';
+			const w = b.w*sx, h = b.h*sy;
+			el.style.cssText += `;width:${w}px;height:${h}px;left:${b.cx*sx-w/2}px;top:${b.cy*sy-h/2}px`;
+			if (b.type === 'pill') el.style.borderRadius = h/2 + 'px';
 		}
 	}
 }
 
-img.addEventListener('load', positionAll);
 window.addEventListener('resize', positionAll);
-if (img.complete) positionAll();
+positionAll();
 
 const code_map = {
 	'ArrowLeft': 'btn-b',
@@ -102,7 +94,7 @@ const code_map = {
 const held = new Set();
 
 function sync() {
-	for (const [id, b] of Object.entries(btns))
+	for (const [id, b] of Object.entries(BTNS))
 		b.el.classList.toggle('pressed', held.has(id));
 }
 

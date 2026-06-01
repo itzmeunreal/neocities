@@ -1,0 +1,123 @@
+/* ── Page layout ─────────────────────────────────────────────────────────── */
+.nespad-layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.nespad-left {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex-shrink: 0;
+    width: 226px;
+}
+
+.nespad-description {
+    font-size: 13px;
+    color: #b0b0b0;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.nespad-download-btn {
+    justify-content: center;
+    width: 100%;
+}
+
+/* ── Controller wrapper ──────────────────────────────────────────────────── */
+.nespad-controller-wrapper {
+    width: 226px;
+    border-radius: 8px;
+    outline: 3px solid #444;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+    overflow: hidden;
+    background: black;
+}
+
+/* ── NES controller widget (from nespad's own index.html / style.css) ─────── */
+#wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+    line-height: 0; /* removes gap below img */
+}
+
+#wrap img#nes {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.05s ease;
+}
+.overlay.pressed {
+    opacity: 1;
+}
+
+.btn-circle {
+    border-radius: 50%;
+    background: var(--skin-pressed, #5a0000);
+}
+.btn-pill {
+    background: #555;
+}
+.btn-dpad {
+    background: rgba(255,255,255,0.22);
+    border-radius: 4px;
+}
+
+/* ── Game emulator panel ─────────────────────────────────────────────────── */
+.nespad-right {
+    flex-shrink: 0;
+    width: 400px;
+}
+
+.nespad-emu-wrapper {
+    width: 400px;
+    height: 306px;
+    border-radius: 8px;
+    outline: 3px solid #444;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+    overflow: hidden;
+    background: black;
+}
+
+#game {
+    width: 100%;
+    height: 100%;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+    .nespad-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nespad-left {
+        width: 100%;
+    }
+
+    .nespad-controller-wrapper {
+        width: 100%;
+    }
+
+    .nespad-right {
+        width: 100%;
+    }
+
+    .nespad-emu-wrapper {
+        width: 100%;
+        height: 240px;
+    }
+
+    #game {
+        width: 100%;
+        height: 240px;
+    }
+}

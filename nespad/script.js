@@ -1,5 +1,5 @@
 const svg_w = 612.002, svg_h = 251.924;
-const BTNS = {
+const btns = {
 	'btn-b': {
 		type: 'circle',
 		cx: 430.15,

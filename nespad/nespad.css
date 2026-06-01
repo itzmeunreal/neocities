@@ -3,6 +3,7 @@
     gap: 20px;
     align-items: flex-start;
 }
+
 .nespad-left {
     display: flex;
     flex-direction: column;
@@ -10,16 +11,19 @@
     flex-shrink: 0;
     width: 226px;
 }
+
 .nespad-description {
     font-size: 13px;
     color: #b0b0b0;
     line-height: 1.75;
     margin: 0;
 }
+
 .nespad-download-btn {
     justify-content: center;
     width: 100%;
 }
+
 .nespad-controller-wrapper {
     width: 226px;
     border-radius: 8px;
@@ -28,17 +32,21 @@
     overflow: hidden;
     background: black;
 }
+
+
 #wrap {
     position: relative;
     display: block;
     width: 100%;
     line-height: 0;
 }
+
 #wrap img#nes {
     width: 100%;
     height: auto;
     display: block;
 }
+
 .overlay {
     position: absolute;
     pointer-events: none;
@@ -48,6 +56,7 @@
 .overlay.pressed {
     opacity: 1;
 }
+
 .btn-circle {
     border-radius: 50%;
     background: var(--skin-pressed, #5a0000);
@@ -57,12 +66,14 @@
 }
 .btn-dpad {
     background: rgba(255,255,255,0.22);
-    border-radius: 2px;
+    border-radius: 4px;
 }
+
 .nespad-right {
     flex-shrink: 0;
     width: 400px;
 }
+
 .nespad-emu-wrapper {
     width: 400px;
     height: 306px;
@@ -77,6 +88,7 @@
     width: 100%;
     height: 100%;
 }
+
 @media (max-width: 640px) {
     .nespad-layout {
         flex-direction: column;

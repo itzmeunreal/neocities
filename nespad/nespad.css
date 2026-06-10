@@ -77,9 +77,10 @@
     height: 100%;
 }
 .release-text {
-    flex: 1;
+    font-size: 15px;
     color: #b0b0b0;
-    margin-bottom: 16px;
+    line-height: 1.75;
+    margin: 0 0 16px 0;
 }
 .release-version {
     font-size: 12px;

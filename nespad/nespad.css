@@ -78,6 +78,7 @@
 }
 .release-text {
     flex: 1;
+    color: #b0b0b0;
     margin-bottom: 16px;
 }
 .release-version {

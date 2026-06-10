@@ -118,3 +118,17 @@ window.addEventListener('blur', () => { held.clear(); sync(); });
 document.addEventListener('visibilitychange', () => {
 	if (document.hidden) { held.clear(); sync(); }
 });
+const emuWrapper = document.querySelector('.nespad-emu-wrapper');
+
+emuWrapper.addEventListener('mouseenter', () => {
+    window.addEventListener('keydown', blockScroll, { passive: false });
+});
+
+emuWrapper.addEventListener('mouseleave', () => {
+    window.removeEventListener('keydown', blockScroll);
+});
+
+function blockScroll(e) {
+    const keys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', ' '];
+    if (keys.includes(e.key)) e.preventDefault();
+}

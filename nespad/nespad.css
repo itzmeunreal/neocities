@@ -78,15 +78,13 @@
 }
 .release-text {
     flex: 1;
+    margin-bottom: 16px;
 }
 .release-version {
     font-size: 12px;
     color: #888;
     font-weight: normal;
     margin-left: 6px;
-}
-.release-summary {
-    margin-bottom: 16px;
 }
 .release-screenshots {
     display: flex;

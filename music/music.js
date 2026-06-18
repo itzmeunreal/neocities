@@ -218,4 +218,4 @@ document.querySelectorAll('.mp-artist-grid-item').forEach(item => {
 });
 
 volumeBar.style.setProperty('--vol', '70%');
-loadPlaylistFile('playlist-sekins.js').then(data => applyPlaylist(data));
+loadPlaylistFile('playlist-xaev.js').then(data => applyPlaylist(data));
